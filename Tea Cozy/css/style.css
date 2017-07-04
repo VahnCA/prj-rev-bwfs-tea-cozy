@@ -1,0 +1,160 @@
+/* Page-wide styles */
+
+body {
+    background-color: black;
+    color: seashell;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/* Fixed page header */
+
+header {
+    /* Vertically align the image and menu */
+    align-items: center;
+    background-color: black;
+    border-bottom: 1px solid seashell;
+    display: flex;
+    height: 69px;
+    /* Arrange the image on one side and the menu on the other */
+    justify-content: space-between;
+    position: fixed;
+    /* Force the header to stick to the top of the viewport */
+    top: 0;
+    /* Force the header to occupy the entire width of the viewport */
+    width: 100%;
+}
+
+header img {
+    height: 50px;
+    padding-left: 10px;
+}
+
+header nav {
+    padding-right: 10px;
+}
+
+header nav a {
+    color: seashell;
+    padding-left: 20px;
+}
+
+/* Styles for the page's content */
+
+main {
+    display: flex;
+    /* Center the sections on the page */
+    justify-content: center;
+    padding-top: 70px;
+}
+
+/* Div to vertically organize the content sections */
+
+#content {
+    display: flex;
+    /* Vertically stack the sections */
+    flex-direction: column;
+}
+
+/* Styles for each of the content sections */
+.main-section {
+    align-items: center;
+    display: flex;
+    /* Center the sections within the column */
+    margin: 0 auto;
+}
+
+#mission {
+    background: url(../images/img-mission-background.jpg);
+    /* Scale the image */
+    background-size: cover;
+    height: 700px;
+    padding-top: 70px;
+    width: 1200px;
+}
+
+#mission-text {
+    background-color: black;
+    /* Force the background of the text to stretch across the #mission div */
+    width: 1200px;
+}
+
+#featured {
+    margin-bottom: 70px;
+    padding-top: 70px;
+    width: 1000px;
+}
+
+#featured-items {
+    display: flex;
+    /* Make the items organize themselves into rows */
+    flex-wrap: wrap;
+    /* Make the rows start in the middle */
+    justify-content: center;
+}
+
+.featured-item {
+    margin-bottom: 10px;
+}
+
+.featured-item img {
+    height: 200px;
+    margin: 10px;
+    width: 300px;
+}
+
+.featured-item p {
+    margin: 0;
+}
+
+#locations {
+    background: url(../images/img-locations-background.jpg);
+    background-size: cover;
+    /* Stack the items in this div as a column */
+    flex-flow: column;
+    height: 500px;
+    /* Vertically center the content of div */
+    justify-content: flex-start;
+    padding-top: 70px;
+    width: 1200px;
+}
+
+#locations h2 {
+    margin-bottom: 0;
+}
+
+#addresses {
+    display: flex;
+}
+
+.address {
+    background-color: black;
+    height: 300px;
+    margin: 15px 20px;
+    opacity: 1;
+    width: 300px;
+}
+
+#contact {
+    height: 200px;
+    /* Force each item to stack on top of each other */
+    flex-flow: column;
+    /* Space the headers */
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+#contact * {
+    /* Remove the headers' margins to allow the flex items to be properly spaced */
+    margin: 0;
+}
+
+/* Page footer */
+
+footer {
+    padding-left: 20px;
+    text-align: left;
+}
